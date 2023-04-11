@@ -1,6 +1,14 @@
+import {observable} from "mobx";
+
 export class User {
+
+    @observable
     userName;
+
+    @observable
     lastName;
+
+    @observable
     firstName;
 
     constructor({userName, lastName, firstName}) {

@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+.user-list {
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 15px;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.users-container {
+  padding-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-row {
+  width: 400px;
+  display: flex;
+}
+.form-row > span {
+  width: 40%;
+  display: block;
+}
+
+.form-row > input {
+  width: 60%;
+}
+
+.form {
+  display: flex;
+}
+.side-panel {
+  display: flex;
+  height: calc(100% - 20px);
+  flex-direction: column;
+  padding: 10px;
+  justify-content: space-between;
+  border-right: grey solid 2px;
+}
+
+.selected-user {
+  background-color: antiquewhite;
+}
+
+input {
+  height: 25px;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+button {
+  height: 25px;
+}
+
+.App {
+  height: 100%;
+  display: flex;
+  position: absolute;
+  flex-direction: row;
 }

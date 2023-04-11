@@ -9,6 +9,7 @@ export class UsersStore {
     @observable
     isLoading = false;
 
+    @observable
     selectedUser = undefined;
 
     @action
@@ -35,6 +36,11 @@ export class UsersStore {
     @action
     selectUser (userName) {
        this.selectedUser = userName;
+    }
+
+    @action
+    createNew () {
+        this.selectedUser = '';
     }
 
 }

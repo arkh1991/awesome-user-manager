@@ -1,4 +1,4 @@
-import {User} from "../components/User";
+import {User} from "../models/User";
 
 let usersData = [{
     userName: 'firstUser',
@@ -26,7 +26,7 @@ export class UsersService {
     }
 
     static deleteUser(userName) {
-        usersData = usersData.filter(item => item.userName === userName);
+        usersData = usersData.filter(item => item.userName !== userName);
 
         return delayedData({});
     }
@@ -49,7 +49,7 @@ export class UsersService {
     }
 
     static getUserNames (filter) {
-        return delayedData(usersData.map(item => item.userName).filter(item => item.includes(filter)));
+        return delayedData(usersData.map(item => item.userName).filter(item => item.includes(filter || '')));
     }
 
 
